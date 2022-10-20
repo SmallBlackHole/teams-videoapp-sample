@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to video filter test app",
+            "type": "chrome",
+            "request": "attach",
+            "port": 9222,
+            "preLaunchTask": "Start Teams App Locally",
+            "timeout": 60000
+        },
+    ],
+}
