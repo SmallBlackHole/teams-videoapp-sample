@@ -66,7 +66,7 @@
                 "background": {
                     "activeOnStart": true,
                     "beginsPattern": ".*",
-                    "endsPattern": "Local:\\s+https://127.0.0.1:5173"
+                    "endsPattern": "VITE\\s+[v0-9.]+\\s+ready in"
                 }
             }
         },
