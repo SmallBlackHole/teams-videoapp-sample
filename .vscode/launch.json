@@ -1,13 +1,42 @@
 {
     "version": "0.2.0",
     "configurations": [
-        {
-            "name": "Attach to video filter test app",
-            "type": "chrome",
-            "request": "attach",
-            "port": 9222,
-            "preLaunchTask": "Start Teams App Locally",
-            "timeout": 60000
-        },
+      {
+        "name": "Attach to video filter test app",
+        "type": "chrome",
+        "request": "attach",
+        "port": 9222,
+        "timeout": 60000,
+        "presentation": {
+            "hidden": true,
+            "group": "attach",
+            "order": 1
+        }
+      },
+      {
+        "name": "Launch test app",
+        "type": "node",
+        "request": "launch",
+        "cwd": "${workspaceFolder}",
+        "runtimeExecutable": "${vxTestAppExecutablePath}", // If use wants to use their own test app, specify here
+        "args": ["--remote-debugging-port=9222"],
+        "outputCapture": "std",
+        "presentation": {
+            "hidden": true,
+            "group": "all",
+            "order": 2
+        }
+      },
     ],
+    "compounds": [
+        {
+            "name": "Launch & attach video filter test app",
+            "configurations": [
+                "Launch test app",
+                "Attach to video filter test app"
+            ],
+            "preLaunchTask": "Start Teams App Locally",
+            "stopAll": true
+        }
+    ]
 }

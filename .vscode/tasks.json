@@ -10,7 +10,6 @@
                 "Validate & install prerequisites",
                 "yarn install",
                 "Start services",
-                "Launch video filter test app"
             ],
             "dependsOrder": "sequence"
         },
@@ -24,7 +23,8 @@
                 "prerequisites": [
                     "nodejs", // Validate if Node.js is installed.
                     // "devCert", // Sample app uses vite-plugin-mkcert to install https dev cert
-                    "portOccupancy" // Validate available ports to ensure those debug ones are not occupied.
+                    "portOccupancy", // Validate available ports to ensure those debug ones are not occupied.
+                    // "vxTestApp" // TODO: add vxTestApp check & install
                 ],
                 "portOccupancy": [
                     5173, // tab service port
@@ -66,14 +66,9 @@
                 "background": {
                     "activeOnStart": true,
                     "beginsPattern": ".*",
-                    "endsPattern": "VITE\\s+[v0-9.]+\\s+ready in"
+                    "endsPattern": "VITE\\s+[\\.v0-9]+\\s+ready in"
                 }
             }
-        },
-        {
-            "label": "Launch video filter test app",
-            "type": "shell",
-            "command": "C:/Users/alexwang/AppData/Local/video-extensibility-test-app/video-extensibility-test-app.exe --remote-debugging-port=9222",
         },
     ]
 }
