@@ -18,7 +18,11 @@
         "type": "node",
         "request": "launch",
         "cwd": "${workspaceFolder}",
-        "runtimeExecutable": "${vxTestAppExecutablePath}", // If use wants to use their own test app, specify here
+        // If user wants to use their own test app, specify here
+        "runtimeExecutable": "${workspaceFolder}/test-app/video-extensibility-test-app",
+        "windows": {
+          "runtimeExecutable": "${workspaceFolder}/test-app/video-extensibility-test-app.exe"
+        },
         "args": ["--remote-debugging-port=9222"],
         "outputCapture": "std",
         "presentation": {
