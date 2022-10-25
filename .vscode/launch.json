@@ -19,9 +19,9 @@
         "request": "launch",
         "cwd": "${workspaceFolder}",
         // If user wants to use their own test app, specify here
-        "runtimeExecutable": "${workspaceFolder}/test-app/video-extensibility-test-app",
+        "runtimeExecutable": "${workspaceFolder}/.tools/vxTestApp/vxTestApp",
         "windows": {
-          "runtimeExecutable": "${workspaceFolder}/test-app/video-extensibility-test-app.exe"
+          "runtimeExecutable": "${workspaceFolder}/.tools/vxTestApp/vxTestApp.exe"
         },
         "args": ["--remote-debugging-port=9222"],
         "outputCapture": "std",

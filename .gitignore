@@ -107,3 +107,5 @@ dist
 .fx/configs/config.local.json
 .fx/states/state.local.json
 .backup
+.env.teamsfx.local
+.tools/
