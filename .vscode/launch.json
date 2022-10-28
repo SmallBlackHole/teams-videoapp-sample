@@ -11,7 +11,8 @@
             "hidden": true,
             "group": "attach",
             "order": 1
-        }
+        },
+        "webRoot": "${workspaceFolder}/app"
       },
       {
         "name": "Launch test app",
